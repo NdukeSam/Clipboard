@@ -8,7 +8,18 @@ body{
     font-family: "Bai Jamjuree", sans-serif;
     font-weight: 400;
     color: hsl(210, 10%, 33%);
+}
 
+.bg-header{
+    background-image: url('./images/bg-header-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: -1;
 }
 
 .hero{
@@ -92,7 +103,10 @@ h5{
 .access, .supercharge{
     text-align: center;
 }
-a
+
+.access {
+    margin: 10rem 0;
+}
 
 
 .showcase img {
@@ -135,7 +149,6 @@ a
 
 .multi-device .ios-btn,
 .multi-device .mac-btn {
-  width: 80%;
   max-width: 300px;
   margin: 10px auto;
 }
@@ -145,7 +158,7 @@ a
   flex-direction: column;
   align-items: center;
   padding: 4rem 20px;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .trusted_by img {
@@ -176,16 +189,30 @@ footer ul li {
   color: hsl(210, 10%, 33%);
 }
 
-footer i {
-  margin: 0 10px;
-  font-size: 24px;
-  color: hsl(210, 10%, 33%);
+footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    min-width: 4rem;
+    color: hsl(210, 10%, 33%);
+}
+
+.socials img {
+    width: 20px;
+    height: 20px;
 }
 
 
 @media (min-width: 768px) {
+
+  .bg-header{
+    background-image: url('./images/bg-header-desktop.png');
+    height: 400px;
+  }  
+  
   .hero {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     text-align: left;
     padding: 5rem 10%;
@@ -209,16 +236,34 @@ footer i {
   }
 
   .track {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem 30%;
+  }
+  
+  .features {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    text-align: left;
-    padding: 5rem 10%;
+    /* gap: 2rem; */
+  }
+
+  .features img {
+    min-width: fit-content;
+    position: relative;
+    bottom: 10%;
+    right: 30%;
+
   }
 
   .features, .access, .supercharge {
-    text-align: left;
+    text-align: center;
     padding: 0 10%;
   }
+
+    .access img{
+     width: 700px;
+    }
 
   .trusted_by {
     flex-direction: row;
@@ -233,8 +278,6 @@ footer i {
   }
 
   .computer_image img {
-    max-width: 30rem;
-    margin: 0 auto;
-    display: block;
+    max-width: 50rem;
   }
 }
